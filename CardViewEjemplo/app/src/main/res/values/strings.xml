@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CardViewEjemplo</string>
+    <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+</resources>

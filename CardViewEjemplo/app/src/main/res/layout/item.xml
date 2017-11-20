@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:clickable="true"
+    cardview:cardElevation="5dp"
+    android:foreground="?selectableItemBackground"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/img_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_more_vert_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp" />
+
+        <ImageView
+            android:id="@+id/person_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_name"
+            android:layout_toRightOf="@+id/person_photo"
+            android:layout_alignParentTop="true"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_age"
+            android:layout_toRightOf="@+id/person_photo"
+            android:layout_below="@+id/person_name" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
