@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App10</string>
+    <string name="saludo">Hola mundo</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="lblInformacion">Informacion</string>
+    <string name="idioma">Idioma</string>
+</resources>

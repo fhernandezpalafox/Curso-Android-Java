@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="saludo">Hello world</string>
+    <string name="btnAceptar">Done</string>
+    <string name="lblInformacion">Information</string>
+    <string name="idioma">language</string>
+</resources>

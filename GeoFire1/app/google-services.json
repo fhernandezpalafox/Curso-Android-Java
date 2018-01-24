@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "504231497868",
+    "firebase_url": "https://tracker-eb866.firebaseio.com",
+    "project_id": "tracker-eb866",
+    "storage_bucket": "tracker-eb866.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504231497868:android:3efa54c7ca636832",
+        "android_client_info": {
+          "package_name": "felipesistemas.com.geofire1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504231497868-gh012bh7rf8aks88m74lm1fjnf6u7snk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "felipesistemas.com.geofire1",
+            "certificate_hash": "8c118f2ab865fdda88751084b494748164550f42"
+          }
+        },
+        {
+          "client_id": "504231497868-q5qe39rpgk26v5ft9c7ecod50vb2rrpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqhjw8KF6W2w69ZfpOJ5cgIqrk9kux83Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504231497868-q5qe39rpgk26v5ft9c7ecod50vb2rrpa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

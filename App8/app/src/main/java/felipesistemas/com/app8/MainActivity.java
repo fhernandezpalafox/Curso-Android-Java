@@ -16,7 +16,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnnotificacion1,btnnotificacion2,btnnotificacion3,btnnotificacion4;
-    private int NumeroNotificaciones = 0;
+    private int NumeroNotificaciones = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
               Nbuilder.setContentTitle("Ejemplo de notificacion");
 
-              Nbuilder.setContentText("Esre es mi contenido de notificacion");
+              Nbuilder.setContentText("Ese es mi contenido de notificacion");
 
               Nbuilder.setTicker("Ejemplo de notificacion");
 
