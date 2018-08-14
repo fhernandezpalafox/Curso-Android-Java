@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         var edad = 28
             edad  = 30
 
-        val nombre  = "Felipe"
+        val nombre  =  "Felipe" //let
             //nombre  = "Oscaar"
 
 
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         //Combinacion de tipos de datos
         val carrera = "Sistemas"
-        val generacion = 2017
+        val generacion = 2018
         val datoCompleto  =  carrera+" Generación "+2017
 
 
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //String
-        val nombres  =  arrayOf("Felipe","Oscar","Juan","Pedro")
+        val nombres  =  arrayOf("Felipe","Oscar","Juan","Pedro","Leo")
 
         for (i in nombres.indices){
             println("La persona ${i+1} se llama ${nombres[i]}")
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //Incializacion de Lista de Objetos
-        val arragloVacio  =  arrayOf<String>()
+        val arragloVacio  =  arrayOf<String>() //List<String>
         val mapVacio = mapOf<String,Float>()
 
 

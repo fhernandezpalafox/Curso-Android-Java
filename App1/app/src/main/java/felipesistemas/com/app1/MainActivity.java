@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
 
     //declaracion de los objetos
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //libking o ligar nuestros obetos de java con .xml
+        //linking o ligar nuestros obetos de java con .xml
         lblInformacion = findViewById(R.id.lblInformacion);
         btnAceptar = findViewById(R.id.btnHolaMundo);
         lblBienvenidos = findViewById(R.id.lblBienvenidos);
@@ -34,4 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
 }
