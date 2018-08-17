@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
                     edocivil = "Casado";
                 }
 
-                informacion  =  String.format(" Tu nombre es %s  y tu apellido es %s y tu estado civil es %s",
+                informacion  =
+                        String.format(" Tu nombre es %s  y tu apellido es %s y tu estado civil es %s",
                                        txtCampo1.getText().toString(),
                                         txtCampo2.getText().toString(),
                                          edocivil);

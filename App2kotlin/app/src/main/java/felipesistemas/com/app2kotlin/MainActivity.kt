@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
             val numero2  =  txtNumero2.text.toString().toInt()
             val suma = numero1 +  numero2
 
-            Toast.makeText(this,"La suma es $suma", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"La suma es $suma",
+                    Toast.LENGTH_LONG).show()
 
         }
     }
