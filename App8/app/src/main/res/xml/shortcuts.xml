@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="myshortcut"
+        android:enabled="true"
+        android:icon="@drawable/androidlogo2"
+        android:shortcutShortLabel="@string/my_shortcut"
+        android:shortcutLongLabel="@string/my_shortcut "
+        android:shortcutDisabledMessage="@string/my_shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="felipesistemas.com.app8"
+            android:targetClass="felipesistemas.com.app8.Main2Activity"/>
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="myshortcut2"
+        android:enabled="true"
+        android:icon="@drawable/androidlogo2"
+        android:shortcutShortLabel="@string/my_shortcut"
+        android:shortcutLongLabel="@string/my_shortcut"
+        android:shortcutDisabledMessage="@string/my_shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="felipesistemas.com.app8"
+            android:targetClass="felipesistemas.com.app8.Main2Activity"/>
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+
+    <shortcut
+        android:shortcutId="myshortcut3"
+        android:enabled="true"
+        android:icon="@drawable/androidlogo2"
+        android:shortcutShortLabel="@string/my_shortcut"
+        android:shortcutLongLabel="@string/my_shortcut "
+        android:shortcutDisabledMessage="@string/my_shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="felipesistemas.com.app8"
+            android:targetClass="felipesistemas.com.app8.Main2Activity"/>
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+</shortcuts>

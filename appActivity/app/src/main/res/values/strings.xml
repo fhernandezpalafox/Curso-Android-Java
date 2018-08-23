@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">appActivity</string>
+    <string name="salir">Salir</string>
+</resources>

@@ -10,6 +10,7 @@ public class ResultadoActivity extends AppCompatActivity {
 
     private TextView lblparametro;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

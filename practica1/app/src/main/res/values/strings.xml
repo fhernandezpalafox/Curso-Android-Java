@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">practica1</string>
+    <string name="titulo">Titulo</string>
+    <string name="subtitulo">Subtitulo</string>
+    <string name="agregar">Agregar</string>
+    <string name="aceptar">Aceptar</string>
+</resources>

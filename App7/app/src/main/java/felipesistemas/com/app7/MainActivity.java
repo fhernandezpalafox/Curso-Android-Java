@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         btn1toast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast1  = Toast.makeText(getApplicationContext(),"Este es un toast",Toast.LENGTH_SHORT);
+                Toast toast1  = Toast.makeText(getApplicationContext(),
+                        "Este es un toast",Toast.LENGTH_SHORT);
                 toast1.show();
             }
         });
@@ -39,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         btn2toast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast1  = Toast.makeText(getApplicationContext(),"Este es un toast",Toast.LENGTH_LONG);
+                Toast toast1  = Toast.makeText(getApplicationContext(),
+                        "Este es un toast",Toast.LENGTH_LONG);
 
                 toast1.setGravity(Gravity.CENTER|Gravity.TOP,0,0);
 
@@ -56,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
                 LayoutInflater inflater = getLayoutInflater();
 
-                View layout =  inflater.inflate(R.layout.layout_toast,(ViewGroup) findViewById(R.id.layoutToast));
+                View layout =
+                        inflater.inflate(R.layout.layout_toast,
+                                (ViewGroup) findViewById(R.id.layoutToast));
 
                 TextView txtMensaje =  layout.findViewById(R.id.Mensaje);
 
@@ -83,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Aceptar", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Toast toast1  = Toast.makeText(getApplicationContext(),"Este es un toast",Toast.LENGTH_SHORT);
+                                Toast toast1  = Toast.makeText(getApplicationContext(),
+                                        "Este es un toast",Toast.LENGTH_SHORT);
                                 toast1.show();
                             }
                         })

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">App8</string>
+    <string name="my_shortcut">Your shortcut name</string>
+    <string name="my_shortcut_disabled">shortcut is disabled</string>
 </resources>
