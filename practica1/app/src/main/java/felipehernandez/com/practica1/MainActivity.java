@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         int randomNum = rand.nextInt((3 - 1) + 1) + 1;
 
-        return randomNum;
+        return randomNum; //0 , 1 , 2
     }
 
 

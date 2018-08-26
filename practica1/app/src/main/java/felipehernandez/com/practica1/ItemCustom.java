@@ -6,7 +6,6 @@ public class ItemCustom {
     public String subTitulo;
     public int Imagen;
 
-
     public String getTitulo() {
         return titulo;
     }

@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
 
                 resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
-                PendingIntent pendingIntent =  PendingIntent.getActivity(MainActivity.this,1,resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent pendingIntent =  PendingIntent.getActivity(MainActivity.this,
+                                        1,resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
 
                 NotificationCompat.InboxStyle  inboxStyle  = new NotificationCompat.InboxStyle();
@@ -156,7 +157,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Nbuilder.addAction(R.drawable.ic_chat_black_24dp,"Ver Mensaje",pendingIntent);
 
-                NotificationManager notificationManager  = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                NotificationManager notificationManager  =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
                 notificationManager.notify(idNoticacion,Nbuilder.build());
 
@@ -195,7 +197,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Nbuilder.setStyle(textoLargo);
 
-                NotificationManager notificationManager  = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                NotificationManager notificationManager  =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
                 notificationManager.notify(0,Nbuilder.build());
 
