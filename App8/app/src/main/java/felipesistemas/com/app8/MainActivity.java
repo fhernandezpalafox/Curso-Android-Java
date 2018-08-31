@@ -219,9 +219,10 @@ public class MainActivity extends AppCompatActivity {
                 resultIntent.putExtra("parametro","valor 1");
                 resultIntent.putExtra("idNotificacion",idNoticacion);
 
-                resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK );
 
-                PendingIntent pendingIntent =  PendingIntent.getActivity(MainActivity.this,1,resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent pendingIntent =  PendingIntent.getActivity(MainActivity.this,
+                        1,resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
                 NotificationCompat.BigPictureStyle bigPictureStyle =  new NotificationCompat.BigPictureStyle();
 
@@ -267,15 +268,16 @@ public class MainActivity extends AppCompatActivity {
                 resultIntent.putExtra("parametro","valor 1");
                 resultIntent.putExtra("idNotificacion",3);
 
-                resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
-                PendingIntent pendingIntent =  PendingIntent.getActivity(MainActivity.this,1,resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent pendingIntent =  PendingIntent.getActivity(MainActivity.this,
+                        1,resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
 
                 configuracionNotificacionV8 =  new ConfiguracionNotificacionV8(MainActivity.this);
 
-                Notification.Builder nb = configuracionNotificacionV8.
-                        getAndroidChannelNotification("Titulo de prueba Android", "By " + "Felipe");
+                Notification.Builder nb =
+                        configuracionNotificacionV8.getAndroidChannelNotification("Titulo de prueba Android", "By " + "Felipe");
 
                 nb.addAction(R.drawable.ic_send_black_24dp,"Enviar",pendingIntent);
 

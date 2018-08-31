@@ -82,6 +82,7 @@ public class ConfiguracionNotificacionV8 extends ContextWrapper {
             return new Notification.Builder(getApplicationContext(), IOS_CHANNEL_ID)
                     .setContentTitle(title)
                     .setContentText(body)
+                    //.setPriority(Notification.PRIORITY_MAX)
                     .setSmallIcon(R.drawable.androidlogo2)
                     .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.androidlogo2))
                     .setAutoCancel(true);

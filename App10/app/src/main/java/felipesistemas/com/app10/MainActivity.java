@@ -7,9 +7,11 @@ import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import java.util.Locale;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +40,38 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        uiSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                Locale locale = null;
+                Configuration config =  new Configuration();
+
+                SharedPreferences.Editor editor = prefe.edit();
+
+                if (uiSwitch.isChecked()){
+
+                    locale = new Locale("en");
+                    Locale.setDefault(locale);
+                    config.locale = locale;
+
+                    editor.putString("idioma","en");
+                    editor.commit();
+                }else{
+                    locale = new Locale("es");
+                    Locale.setDefault(locale);
+                    config.locale = locale;
+
+                    editor.putString("idioma","es");
+                    editor.commit();
+                }
+
+                getResources().updateConfiguration(config,null);
+                Intent refresh =  new Intent(MainActivity.this,MainActivity.class);
+                startActivity(refresh);
+                finish();
+            }
+        });
 
         uiSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
