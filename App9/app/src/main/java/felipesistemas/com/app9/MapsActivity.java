@@ -92,7 +92,9 @@ public class MapsActivity extends AppCompatActivity
                 marker.remove();
             }
 
-           marker =  mMap.addMarker(new MarkerOptions().position(new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude())).title("My Location"));
+           marker =  mMap.addMarker(new MarkerOptions().position(
+                   new LatLng(mCurrentLocation.getLatitude(),
+                           mCurrentLocation.getLongitude())).title("My Location"));
         }
     }
 
@@ -101,12 +103,16 @@ public class MapsActivity extends AppCompatActivity
     }
 
     private void requestLocationUpdates() {
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                    ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED &&
+                    ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                            != PackageManager.PERMISSION_GRANTED) {
 
-                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, permiso);
+                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION}, permiso);
 
             } else {
 
@@ -114,10 +120,12 @@ public class MapsActivity extends AppCompatActivity
                         .addOnSuccessListener(this, new OnSuccessListener<LocationSettingsResponse>() {
                             @Override
                             public void onSuccess(LocationSettingsResponse locationSettingsResponse) {
-                                if (ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                                if (ActivityCompat.checkSelfPermission(MapsActivity.this,
+                                        Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                                     return;
                                 }
-                                mLocationProviderClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+                                mLocationProviderClient.requestLocationUpdates(mLocationRequest,
+                                        mLocationCallback, Looper.myLooper());
 
                                 updateUI();
                             }
