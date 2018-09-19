@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EjemploSQLite</string>
+    <string name="title_activity_detalle_eventos">DetalleEventos</string>
+</resources>

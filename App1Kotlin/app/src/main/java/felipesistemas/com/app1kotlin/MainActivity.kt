@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
 
         for (i in 0..4){
-            println("Tu calificaicon es ${calificaciones[i]}")
+            println("Tu calificacion es ${calificaciones[i]}")
         }
 
 

@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent compartirMensaje = new Intent(Intent.ACTION_SEND);
                 compartirMensaje.setType("text/plain");
                 compartirMensaje.putExtra(Intent.EXTRA_TEXT, "Este es un mensaje de prueba");
-                compartirMensaje.setPackage("com.whatsapp");
+               // compartirMensaje.setPackage("com.whatsapp");
                 startActivity(compartirMensaje);
             }
         });
