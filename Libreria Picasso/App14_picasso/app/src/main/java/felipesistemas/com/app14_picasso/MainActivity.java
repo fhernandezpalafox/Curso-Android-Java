@@ -39,10 +39,11 @@ public class MainActivity extends AppCompatActivity {
         imgDescarga  =  findViewById(R.id.imgDescargar);
         ImgDescargar2  =  findViewById(R.id.ImgDescargar2);
 
-        Picasso.with(getApplicationContext()).load(url).into(ImgDescargar2);
+        Picasso.with(getApplicationContext())
+                .load(url)
+                .into(ImgDescargar2);
 
         //Descargar la imagen de la forma manual
-
         new DownloadImageTask().execute(url);
     }
 
