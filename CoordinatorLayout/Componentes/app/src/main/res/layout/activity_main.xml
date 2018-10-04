@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    tools:context="felipehernandex.com.componentes.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Numero 1"
+                    android:id="@+id/txtNum1"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Numero 2"
+                    android:id="@+id/txtNum2"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rdGrupo">
+
+                <RadioButton
+                    android:text="Sumar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdSuma"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Restar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdResta"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <CheckBox
+                android:text="Multiplicar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chekMutiplicar" />
+
+            <CheckBox
+                android:text="Dividir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chekDividir" />
+
+            <TextView
+                android:text="Que operacion te gusta mas?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spineerOperaciones" />
+
+            <Button
+                android:text="Operacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnOperacion" />
+
+            <TextView
+                android:text="Resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblResultado"
+                android:lines="4" />
+
+            <Button
+                android:text="ir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnIr" />
+
+            <Button
+                android:text="Lista con imagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnlistaConImagen" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -27,18 +27,12 @@ public class Mapa1 extends AppCompatActivity {
         // This contains the MapView in XML and needs to be called after the access token is configured.
         //setContentView(R.layout.activity_annotation_marker);
 
-        mapView = (MapView) findViewById(R.id.mapView);
+        mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(MapboxMap mapboxMap) {
-                mapboxMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(48.13863, 11.57603))
-                        .title("Titulo del mapa")
-                        .snippet("Descripcion del mapa"));
-
-            }
-        });
+        mapView.getMapAsync(mapboxMap -> mapboxMap.addMarker(new MarkerOptions() // mapView.getMapAsync(new OnMapReadyCallback() {
+                .position(new LatLng(48.13863, 11.57603))
+                .title("Titulo del mapa")
+                .snippet("Descripcion del mapa")));
     }
 
     @Override
