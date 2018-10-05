@@ -66,7 +66,8 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Jsonurl, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET,
+                                           Jsonurl, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
