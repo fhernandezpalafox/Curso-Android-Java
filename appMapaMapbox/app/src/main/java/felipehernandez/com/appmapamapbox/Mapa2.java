@@ -76,8 +76,10 @@ public class Mapa2 extends AppCompatActivity implements OnMapReadyCallback, Perm
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        permissionsManager.onRequestPermissionsResult(requestCode,
+                permissions, grantResults);
     }
 
     @Override
