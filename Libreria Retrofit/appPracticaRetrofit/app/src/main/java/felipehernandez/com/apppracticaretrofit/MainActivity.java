@@ -22,10 +22,12 @@ import android.widget.Toast;
 import com.claudiodegio.msv.BaseMaterialSearchView;
 import com.claudiodegio.msv.MaterialSearchView;
 import com.claudiodegio.msv.OnSearchViewListener;
+import com.google.gson.Gson;
 
 import java.util.List;
 
 import Controladores.ArticulosController;
+import Entidades.Articulo;
 import Utilidades.SwipeHelper;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout swipeRefreshLayout;
     private FloatingActionButton fbButton;
     private BaseMaterialSearchView mSearchView;
+    private ArticulosController articulosController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,8 +127,9 @@ public class MainActivity extends AppCompatActivity {
         divider.setDrawable(ContextCompat.getDrawable(getBaseContext(), R.drawable.custom_divider));
         reyclerViewArticulo.addItemDecoration(divider);
 
-        ArticulosController articulosController =  new ArticulosController();
+        articulosController =  new ArticulosController();
         articulosController.cargarArticulos(reyclerViewArticulo, this, null);
+
     }
 
     public void SwipeRefresh(){
@@ -166,6 +170,18 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(int pos) {
                                 // TODO: OnUnshare
+
+                                Intent i = new Intent(getApplicationContext(),AgregarActivity.class);
+                                Articulo objart =  new Articulo();
+                                objart = articulosController.listaArticulos.get(pos);
+                                Gson objGson = new Gson();
+
+                                String artString  = objGson.toJson(objart);
+
+                                i.putExtra("clase",artString);
+                                i.putExtra("ismodified",true);
+
+                                startActivity(i);
                             }
                         }
                 ));

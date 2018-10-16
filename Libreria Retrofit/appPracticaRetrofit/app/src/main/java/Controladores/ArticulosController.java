@@ -3,6 +3,7 @@ package Controladores;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -24,7 +25,7 @@ import static java.util.Arrays.stream;
 
 public class ArticulosController {
 
-    private List<Articulo> listaArticulos;
+    public List<Articulo> listaArticulos;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView recyclerViewArticulos2;
 
@@ -55,7 +56,7 @@ public class ArticulosController {
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.18.7.25:2403/")
+                .baseUrl("http://192.168.200.2:2403/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
@@ -110,4 +111,125 @@ public class ArticulosController {
 
     }
 
+
+    public void agregarArticulo(Articulo articulo,  Context _context){
+
+        context = _context;
+
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setMessage("Cargando...");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
+
+        Gson gson = new GsonBuilder()
+                       .create(); //                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.200.2:2403/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        RestClient restClient = retrofit.create(RestClient.class);
+
+        Call<Articulo> call = restClient.insertarArticulo(articulo);
+
+
+        call.enqueue(new Callback<Articulo>() {
+            @Override
+            public void onResponse(Call<Articulo> call, Response<Articulo> response) {
+
+                switch (response.code()) {
+                    case 200:
+
+                        Articulo objArticulo =  new Articulo();
+
+                        objArticulo =  response.body();
+
+                        Toast.makeText(context,"Se inserto correctamente "+objArticulo.getNombre(),Toast.LENGTH_LONG).show();
+
+                        if (progressDialog.isShowing())
+                            progressDialog.dismiss();
+
+                        break;
+                    case 401:
+
+                        break;
+                    default:
+
+                        break;
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Articulo> call, Throwable t) {
+
+                System.out.println(call);
+                if (progressDialog.isShowing())
+                    progressDialog.dismiss();
+
+            }
+        });
+    }
+
+
+    public void modificarArticulo(Articulo articulo,  Context _context){
+
+        context = _context;
+
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setMessage("Cargando...");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
+
+        Gson gson = new GsonBuilder()
+                .create(); //                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.200.2:2403/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        RestClient restClient = retrofit.create(RestClient.class);
+
+        Call<Articulo> call = restClient.modificarArticulo(articulo, articulo.getId());
+
+
+        call.enqueue(new Callback<Articulo>() {
+            @Override
+            public void onResponse(Call<Articulo> call, Response<Articulo> response) {
+
+                switch (response.code()) {
+                    case 200:
+
+                        Articulo objArticulo =  new Articulo();
+
+                        objArticulo =  response.body();
+
+                        Toast.makeText(context,"Se modifico correctamente "+objArticulo.getNombre(),Toast.LENGTH_LONG).show();
+
+                        if (progressDialog.isShowing())
+                            progressDialog.dismiss();
+
+                        break;
+                    case 401:
+
+                        break;
+                    default:
+
+                        break;
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Articulo> call, Throwable t) {
+
+                System.out.println(call);
+                if (progressDialog.isShowing())
+                    progressDialog.dismiss();
+
+            }
+        });
+    }
 }
