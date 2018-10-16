@@ -116,16 +116,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ObtenerDatos(){
+
+
         // usa esta configuración para mejorar el rendimiento si sabes que cambia
         // en el contenido no cambia el tamaño del diseño de RecyclerView
+        //reyclerViewArticulo.setHasFixedSize(true);
+
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        reyclerViewArticulo.setLayoutManager(llm);
         reyclerViewArticulo.setHasFixedSize(true);
 
         // use a linear layout manager
-        reyclerViewArticulo.setLayoutManager(new LinearLayoutManager(this));
+       // reyclerViewArticulo.setLayoutManager(new LinearLayoutManager(this));
 
-        DividerItemDecoration divider = new DividerItemDecoration(reyclerViewArticulo.getContext(), DividerItemDecoration.VERTICAL);
+       /* DividerItemDecoration divider = new DividerItemDecoration(reyclerViewArticulo.getContext(), DividerItemDecoration.VERTICAL);
         divider.setDrawable(ContextCompat.getDrawable(getBaseContext(), R.drawable.custom_divider));
-        reyclerViewArticulo.addItemDecoration(divider);
+        reyclerViewArticulo.addItemDecoration(divider); */
 
         articulosController =  new ArticulosController();
         articulosController.cargarArticulos(reyclerViewArticulo, this, null);
@@ -158,6 +164,14 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(int pos) {
                                 // TODO: onDelete
+
+                                Articulo objart =  new Articulo();
+                                objart = articulosController.listaArticulos.get(pos);
+                                Gson objGson = new Gson();
+
+                                articulosController.eliminarArticulo(objart.getId(),MainActivity.this);
+                                articulosController.listaArticulos.remove(pos);
+                                articulosController.mAdapter.notifyDataSetChanged();
                             }
                         }
                 ));

@@ -105,7 +105,6 @@ public class AgregarActivity extends AppCompatActivity {
                 articulosController.agregarArticulo(articulo, this);
             }
 
-
         }
 
         return super.onOptionsItemSelected(item);

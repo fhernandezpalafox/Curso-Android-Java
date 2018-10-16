@@ -5,6 +5,7 @@ import java.util.List;
 import Entidades.Articulo;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -24,4 +25,6 @@ public interface RestClient {
     @PUT("articulos/{id}")
     Call<Articulo> modificarArticulo(@Body Articulo articulo, @Path("id") String id);
 
+    @DELETE("articulos/{id}")
+    Call<String> eliminarArticulo( @Path("id") String id);
 }

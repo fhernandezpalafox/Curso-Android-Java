@@ -23,9 +23,15 @@ public class ArticulosAdapter extends  RecyclerView.Adapter<ArticulosAdapter.Vie
 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista, parent, false);
-        ViewHolder viewHolder = new ViewHolder(v);
-        return viewHolder;
+      //  View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista, parent, false);
+      //  ViewHolder viewHolder = new ViewHolder(v);
+
+        View v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_lista, parent, false);
+
+        ViewHolder vh = new ViewHolder(v);
+
+        return vh;
     }
 
     @Override
@@ -37,6 +43,11 @@ public class ArticulosAdapter extends  RecyclerView.Adapter<ArticulosAdapter.Vie
         holder.titulo.setText(nombre);
         holder.descripcion.setText(descripcion);
 
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 
     @Override
@@ -54,5 +65,8 @@ public class ArticulosAdapter extends  RecyclerView.Adapter<ArticulosAdapter.Vie
         }
 
     }
+
+
+
 
 }

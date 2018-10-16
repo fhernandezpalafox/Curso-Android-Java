@@ -1,5 +1,6 @@
 package Controladores;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -15,19 +16,19 @@ import java.util.List;
 import Adaptadores.ArticulosAdapter;
 import Entidades.Articulo;
 import Interfaces.RestClient;
+import felipehernandez.com.apppracticaretrofit.MainActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 import static java.util.Arrays.stream;
 
 public class ArticulosController {
 
     public List<Articulo> listaArticulos;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView recyclerViewArticulos2;
+    public RecyclerView.Adapter mAdapter;
+    public RecyclerView recyclerViewArticulos2;
 
     private ProgressDialog progressDialog;
 
@@ -35,6 +36,7 @@ public class ArticulosController {
 
     private String queryBusqueda = "";
     private List<Articulo> listaArticulosBusqueda;
+
 
     public void cargarArticulos(final RecyclerView recyclerViewArticulos, Context context, String queryBusqueda) {
 
@@ -70,6 +72,8 @@ public class ArticulosController {
 
                 switch (response.code()) {
                     case 200:
+                        listaArticulos.clear();
+
                         listaArticulos = response.body();
                         //view.notifyDataSetChanged(data.getResults());
                         // especifique un adaptador con la lista para mostrar
@@ -84,7 +88,9 @@ public class ArticulosController {
                       //  }
 
 
+
                         mAdapter = new ArticulosAdapter(listaArticulos);
+
                         recyclerViewArticulos.setAdapter(mAdapter);
                         mAdapter.notifyDataSetChanged();
 
@@ -231,5 +237,54 @@ public class ArticulosController {
 
             }
         });
+    }
+
+
+    public void eliminarArticulo(String id, Context _context){
+
+        context = _context;
+
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setMessage("Cargando...");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
+
+        Gson gson = new GsonBuilder()
+                .create(); //                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.200.2:2403/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+
+        RestClient restClient = retrofit.create(RestClient.class);
+
+        Call<String> call = restClient.eliminarArticulo(id);
+
+
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+
+                int respuesta  = Integer.parseInt(response.body());
+
+                if (respuesta>0){
+                    Toast.makeText(context,"Se elimino correctamente ",Toast.LENGTH_LONG).show();
+                    if (progressDialog.isShowing())
+                        progressDialog.dismiss();
+                }else {
+                    Toast.makeText(context,"Error al eliminar ",Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                System.out.println(call);
+                if (progressDialog.isShowing())
+                    progressDialog.dismiss();
+            }
+        });
+
     }
 }
