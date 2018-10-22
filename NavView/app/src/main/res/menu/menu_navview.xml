@@ -3,7 +3,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_seccion_1"
-            android:icon="@drawable/ic_menu"
+            android:icon="@drawable/ic_build_black_24dp"
             android:title="@string/seccion_1"/>
         <item
             android:id="@+id/menu_seccion_2"
