@@ -10,6 +10,12 @@
         android:id="@+id/messagesList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:incomingDefaultBubbleColor="@android:color/holo_green_dark"
+        app:incomingTimeTextColor="@color/white"
+        app:incomingDefaultBubblePressedColor="@android:color/darker_gray"
+        app:outcomingDefaultBubblePressedColor="@android:color/darker_gray"
+        app:outcomingDefaultBubbleColor="@android:color/holo_blue_dark"
+        app:outcomingTimeTextColor="@color/white"
         android:layout_above="@+id/input" />
 
     <com.stfalcon.chatkit.messages.MessageInput
