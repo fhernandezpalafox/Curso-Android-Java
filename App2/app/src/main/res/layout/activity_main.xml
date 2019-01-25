@@ -8,11 +8,11 @@
 
     <EditText
         android:id="@+id/txtCampo1"
-        android:layout_width="360dp"
+        android:layout_width="0dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="text"
@@ -22,11 +22,11 @@
 
     <EditText
         android:id="@+id/txtCampo2"
-        android:layout_width="362dp"
+        android:layout_width="0dp"
         android:layout_height="46dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -36,11 +36,11 @@
 
     <EditText
         android:id="@+id/txtCampo3"
-        android:layout_width="361dp"
+        android:layout_width="0dp"
         android:layout_height="44dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Edad"
         android:inputType="number"
@@ -60,11 +60,11 @@
 
     <TextView
         android:id="@+id/lblInformacion"
-        android:layout_width="365dp"
+        android:layout_width="0dp"
         android:layout_height="59dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:lines="3"
         android:text="Informacion"
         app:layout_constraintEnd_toEndOf="parent"
