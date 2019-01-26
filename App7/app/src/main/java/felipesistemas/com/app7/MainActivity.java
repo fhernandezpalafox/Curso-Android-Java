@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btn1toast, btn2toast , btn3toast, btnsnackbar;
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast1  = Toast.makeText(getApplicationContext(),
                         "Este es un toast",Toast.LENGTH_LONG);
 
-                toast1.setGravity(Gravity.CENTER|Gravity.TOP,0,0);
+                toast1.setGravity(Gravity.CENTER|Gravity.TOP,
+                        0,0);
 
                 toast1.show();
             }
