@@ -11,6 +11,7 @@
             android:action="android.intent.action.VIEW"
             android:targetPackage="felipesistemas.com.app8"
             android:targetClass="felipesistemas.com.app8.Main2Activity"/>
+
         <categories android:name="android.shortcut.conversation"/>
     </shortcut>
 
