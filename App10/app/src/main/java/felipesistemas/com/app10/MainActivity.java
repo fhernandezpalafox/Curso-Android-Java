@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         uiSwitch  =  findViewById(R.id.switch1);
 
         String idioma =prefe.getString("idioma", "");
+
         if (idioma.length()!=0){
 
             if (idioma.equals("es")){

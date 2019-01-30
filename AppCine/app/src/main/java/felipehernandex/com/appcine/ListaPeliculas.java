@@ -32,7 +32,7 @@ public class ListaPeliculas extends AppCompatActivity {
     public void Inicializar() {
         Lista = (ListView) findViewById(R.id.Lista);
 
-        listaPeliculas = new ArrayList<Pelicula>();
+        listaPeliculas = new ArrayList<>();
         listaPeliculas.add(new Pelicula("Ilucionistas 2", R.drawable.pelicula1, Float.parseFloat("2.5"), "Un año después de engañar al FBI y ganar la adulación del público con sus espectáculos de magia al estilo Robin Hood, Los Cuatro Jinetes reaparecen en una actuación aún más impresionante con la esperanza de exponer las prácticas poco éticas de un magnate de la tecnología. "));
         listaPeliculas.add(new Pelicula("Animales fantasticos", R.drawable.pelicula2, Float.parseFloat("1.5"), "Adaptación del libro homónimo de J.K. Rowling, un spin-of que amplía el mundo de la saga Harry Potter desde el punto de vista de Newt Scamander, un mago a quien le encargan escribir un libro sobre seres fantásticos. Se ambientará setenta años antes de lo narrado en las películas del mago."));
         listaPeliculas.add(new Pelicula("La era de hielo", R.drawable.pelicula3, Float.parseFloat("3.5"), "La épica persecución de Scrat de la escurridiza bellota, lo catapulta a un universo donde accidentalmente desata una serie de eventos cósmicos que transforman y amenazan al mundo de La Era de Hielo. "));

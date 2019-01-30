@@ -44,11 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void Eventos(){
 
+
         btnActivity1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent =  new Intent(getApplicationContext(), Main2Activity.class);
+                Intent intent =  new Intent(getApplicationContext(),
+                                             Main2Activity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
         btnActivity2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent(getApplicationContext(), Main3Activity.class);
+                Intent intent =  new Intent(getApplicationContext(),
+                        Main3Activity.class);
 
                 intent.putExtra("nombre","Felipe");
                 intent.putExtra("edad",29);

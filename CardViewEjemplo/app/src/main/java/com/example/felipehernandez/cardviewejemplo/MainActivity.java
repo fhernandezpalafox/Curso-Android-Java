@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        personName = (TextView)findViewById(R.id.person_name);
-        personAge = (TextView)findViewById(R.id.person_age);
-        personPhoto = (ImageView)findViewById(R.id.person_photo);
+        personName = findViewById(R.id.person_name);
+        personAge = findViewById(R.id.person_age);
+        personPhoto = findViewById(R.id.person_photo);
 
         personName.setText("Emma Wilson");
         personAge.setText("23 years old");

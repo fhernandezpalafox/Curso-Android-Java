@@ -15,13 +15,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.txtNombre) EditText nombre;
+    @BindView(R.id.txtNombre) EditText nombre; // findViewById(R.id.txtNombre)
     @BindView(R.id.txtCorreo) EditText correo;
     @BindView(R.id.switchEstudiante) Switch SwitchEstudiante;
     @BindView(R.id.lblInformacion) TextView lblInformacion;
 
 
-   // @BindViews({R.id.txtNombre, R.id.txtCorreo})
+   // @BindViews({R.id.txtNombre, R.id.txtCorreo}) listaEditext
    // List<EditText> lista;
 
 
