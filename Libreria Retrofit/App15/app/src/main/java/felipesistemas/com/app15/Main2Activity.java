@@ -63,22 +63,20 @@ public class Main2Activity extends AppCompatActivity {
             products.add(n);
         }
 
-        runOnUiThread(new Runnable() {
-            @Override public void run() {
+        runOnUiThread(() -> {
 
-                ListAdapter adapter = new SimpleAdapter(
-                        Main2Activity.this,
-                        products,
-                        R.layout.lista_item,
-                        new String[]{"id", "name",  "description"},
-                        new int[]{R.id.Fabricante, R.id.Nombre, R.id.Precio});
+            ListAdapter adapter = new SimpleAdapter(
+                    Main2Activity.this,
+                    products,
+                    R.layout.lista_item,
+                    new String[]{"id", "name",  "description"},
+                    new int[]{R.id.Fabricante, R.id.Nombre, R.id.Precio});
 
-                lstProductos.setAdapter(adapter);
+            lstProductos.setAdapter(adapter);
 
-                //ProgressDialog se cierra
-                if (progressDialog.isShowing())
-                    progressDialog.dismiss();
-            }
+            //ProgressDialog se cierra
+            if (progressDialog.isShowing())
+                progressDialog.dismiss();
         });
 
     }

@@ -67,9 +67,10 @@ public class Main2Activity extends AppCompatActivity {
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
-                                           Jsonurl, new Response.Listener<String>() {
+                                                            Jsonurl,
+                                                                 new Response.Listener<String>() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onResponse(String response) { //Respuesta positiva
 
                         String responseJson  = response;
 

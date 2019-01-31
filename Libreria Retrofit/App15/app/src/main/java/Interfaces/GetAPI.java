@@ -14,4 +14,5 @@ public interface GetAPI {
 
     @GET("products")
     Call<List<Productos>> cargarProductos();//@Query("q") String status
+
 }

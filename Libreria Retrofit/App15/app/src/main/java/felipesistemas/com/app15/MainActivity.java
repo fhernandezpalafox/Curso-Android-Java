@@ -17,14 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
         btnAbrir  =  findViewById(R.id.btnAbrir);
 
-        btnAbrir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnAbrir.setOnClickListener(v -> {
 
-                Intent intent  = new Intent(getApplicationContext(),Main2Activity.class);
-                startActivity(intent);
+            Intent intent  = new Intent(getApplicationContext(),Main2Activity.class);
+            startActivity(intent);
 
-            }
         });
 
     }

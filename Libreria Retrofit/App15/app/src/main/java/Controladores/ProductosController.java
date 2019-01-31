@@ -26,7 +26,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by FelipeHernandez on 29/12/17.
  */
 
-public class ProductosController implements Callback<List<Productos>> {
+public class ProductosController
+        implements Callback<List<Productos>> {
 
     static final String BASE_URL = "http://frosty-thunder-508.getsandbox.com/rest/1_0/";
 

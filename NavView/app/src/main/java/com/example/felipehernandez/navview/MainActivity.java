@@ -39,47 +39,44 @@ public class MainActivity extends AppCompatActivity {
 
         navView = (NavigationView)findViewById(R.id.navview);
         navView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                menuItem -> {
 
-                        boolean fragmentTransaction = false;
-                        Fragment fragment = null;
+                    boolean fragmentTransaction = false;
+                    Fragment fragment = null;
 
-                        switch (menuItem.getItemId()) {
-                            case R.id.menu_seccion_1:
-                                fragment = new Fragment1();
-                                fragmentTransaction = true;
-                                break;
-                            case R.id.menu_seccion_2:
-                                fragment = new Fragment2();
-                                fragmentTransaction = true;
-                                break;
-                            case R.id.menu_seccion_3:
-                                fragment = new Fragment3();
-                                fragmentTransaction = true;
-                                break;
-                            case R.id.menu_opcion_1:
-                                Log.i("NavigationView", "Pulsada opción 1");
-                                break;
-                            case R.id.menu_opcion_2:
-                                Log.i("NavigationView", "Pulsada opción 2");
-                                break;
-                        }
-
-                        if(fragmentTransaction) {
-                            getSupportFragmentManager().beginTransaction()
-                                    .replace(R.id.content_frame, fragment)
-                                    .commit();
-
-                            menuItem.setChecked(true);
-                            getSupportActionBar().setTitle(menuItem.getTitle());
-                        }
-
-                        drawerLayout.closeDrawers();
-
-                        return true;
+                    switch (menuItem.getItemId()) {
+                        case R.id.menu_seccion_1:
+                            fragment = new Fragment1();
+                            fragmentTransaction = true;
+                            break;
+                        case R.id.menu_seccion_2:
+                            fragment = new Fragment2();
+                            fragmentTransaction = true;
+                            break;
+                        case R.id.menu_seccion_3:
+                            fragment = new Fragment3();
+                            fragmentTransaction = true;
+                            break;
+                        case R.id.menu_opcion_1:
+                            Log.i("NavigationView", "Pulsada opción 1");
+                            break;
+                        case R.id.menu_opcion_2:
+                            Log.i("NavigationView", "Pulsada opción 2");
+                            break;
                     }
+
+                    if(fragmentTransaction) {
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_frame, fragment)
+                                .commit();
+
+                        menuItem.setChecked(true);
+                        getSupportActionBar().setTitle(menuItem.getTitle());
+                    }
+
+                    drawerLayout.closeDrawers();
+
+                    return true;
                 });
 
     }
@@ -100,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId()) {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
+
                 return true;
         }
 
