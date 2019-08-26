@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
             var elementoSelecionado = spinnerOperaciones.selectedItem.toString()
 
-            var resultado = 0
+            var resultado: Int
 
             if (elementoSelecionado.equals("Sumar")){
 

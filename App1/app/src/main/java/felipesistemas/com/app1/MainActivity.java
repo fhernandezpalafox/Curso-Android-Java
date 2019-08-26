@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //linking o ligar nuestros obetos de java con .xml
-        lblInformacion = findViewById(R.id.lblInformacion);
         btnAceptar = findViewById(R.id.btnHolaMundo);
         lblBienvenidos = findViewById(R.id.lblBienvenidos);
-
+        lblInformacion = findViewById(R.id.lblInformacion);
 
         //Evento del boton aceptar.
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
               lblInformacion.setText("Hola , bienvenido al curso de Andriod");
             }
