@@ -28,7 +28,7 @@ public class ChatActivity extends AppCompatActivity {
     private Socket mSocket;
     {
         try {
-            mSocket = IO.socket("http://172.16.48.6:3000/"); //https://socket-io-chat.now.sh
+            mSocket = IO.socket("https://socket-io-chat.now.sh");
         } catch (URISyntaxException e) {}
     }
 
