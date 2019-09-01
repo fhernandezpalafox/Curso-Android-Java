@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="375c97e1-4715-4e74-89c2-b57dbd675086" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Componentes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/androidTest/java/felipehernandex/com/componentes/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/androidTest/java/felipehernandex/com/componentes/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Main2Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Main2Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Main3Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Main3Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Main4Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Main4Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/java/felipehernandex/com/componentes/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/c_bill_gates.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/c_bill_gates.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/c_larry_page.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/c_larry_page.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/c_sergey_brin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/c_sergey_brin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/g_bill_gates.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/g_bill_gates.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/g_larry_page.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/g_larry_page.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/g_sergey_brin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/drawable/g_sergey_brin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/activity_main4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/layout_persona.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/layout/layout_persona.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/menu/menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-hdpi/ic_arrow_back_white_48dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-hdpi/ic_arrow_back_white_48dp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-mdpi/ic_arrow_back_white_48dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-mdpi/ic_arrow_back_white_48dp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xhdpi/ic_arrow_back_white_48dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xhdpi/ic_arrow_back_white_48dp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxhdpi/ic_arrow_back_white_48dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxhdpi/ic_arrow_back_white_48dp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxxhdpi/ic_arrow_back_white_48dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxxhdpi/ic_arrow_back_white_48dp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/values-w820dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/values-w820dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/app/src/test/java/felipehernandex/com/componentes/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/app/src/test/java/felipehernandex/com/componentes/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/settings.gradle" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="15" />
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1352" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="375c97e1-4715-4e74-89c2-b57dbd675086" name="Default Changelist" comment="" />
+      <created>1567343711768</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567343711768</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="2560" height="1352" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32965735" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+</project>

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         //INSERTAR DATOS
         //datasource.guardarEvento("Clausura del festival","Martes 17 Nov.");
 
-        final ListView listaeventos  = (ListView) findViewById(R.id.listaeventos);
+        final ListView listaeventos  = findViewById(R.id.listaeventos);
         List<EntidadEvento> registros = new ArrayList<EntidadEvento>();
 
         // SE ESTA LLAMANDO AL METODO PARA TRAERNOS  TODA LA INFORMACION DE LA BD
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             LayoutInflater inflater =  LayoutInflater.from(getContext());
             View item = inflater.inflate(R.layout.lista_eventos, null);
 
-            TextView lbltitulo  = (TextView) item.findViewById(R.id.LblTitulo);
+            TextView lbltitulo  = item.findViewById(R.id.LblTitulo);
             lbltitulo.setText(_datos.get(position).getDESCRIPCION_EVENTO());
 
             return(item);

@@ -26,10 +26,6 @@ public class DetalleEventos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_eventos);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
          datasource  =  new EventosDatasource(this);
 
         _txtdia  = (TextView) findViewById(R.id.txtdia);
@@ -51,7 +47,6 @@ public class DetalleEventos extends AppCompatActivity {
 
         }
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void eliminar(View view)
