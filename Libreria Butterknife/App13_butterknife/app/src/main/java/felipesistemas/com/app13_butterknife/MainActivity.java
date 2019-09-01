@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         EresEstudiante  = (SwitchEstudiante.isChecked())?" Si eres Estudiante":" No eres estudiante";
 
         lblInformacion.setText(String.format("Tu nombre es: %s y tu correo es: %s, %s ",
-                                                       nombre.getText().toString(),
-                                                                 correo.getText().toString(),EresEstudiante));
+                nombre.getText().toString(),
+                correo.getText().toString(),EresEstudiante));
 
     }
 }
