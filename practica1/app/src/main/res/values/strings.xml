@@ -3,5 +3,5 @@
     <string name="titulo">Titulo</string>
     <string name="subtitulo">Subtitulo</string>
     <string name="agregar">Agregar</string>
-    <string name="aceptar">Aceptar</string>
+    <string name="aceptar">Habilitar</string>
 </resources>

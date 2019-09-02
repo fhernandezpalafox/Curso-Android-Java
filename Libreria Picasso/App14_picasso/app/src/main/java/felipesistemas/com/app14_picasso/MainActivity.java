@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             //Codigo para compartir la imagen
-            Bitmap imagenGuardar = result;
+            final Bitmap imagenGuardar = result;
 
 
             File path =  Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
@@ -87,8 +87,15 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     //no necesito, permitir permiso
                     try {
-                        FileOutputStream fileOutputStream = new FileOutputStream(file);
-                        imagenGuardar.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+                        final FileOutputStream fileOutputStream = new FileOutputStream(file);
+
+                        Thread t = new Thread(new Runnable() { public void run() {
+
+                            imagenGuardar.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+
+                        }});
+
+
                         fileOutputStream.flush();
                         fileOutputStream.close();
                         file.setReadable(true, false);
@@ -104,8 +111,12 @@ public class MainActivity extends AppCompatActivity {
             }else {
 
                 try {
-                    FileOutputStream fileOutputStream = new FileOutputStream(file);
-                    imagenGuardar.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+                    final FileOutputStream fileOutputStream = new FileOutputStream(file);
+                    Thread t = new Thread(new Runnable() { public void run() {
+
+                        imagenGuardar.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+
+                    }});
                     fileOutputStream.flush();
                     fileOutputStream.close();
                     file.setReadable(true, false);

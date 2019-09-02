@@ -25,16 +25,13 @@ import java.util.List;
 import java.util.Random;
 
 import es.dmoral.toasty.Toasty;
-import gr.escsoft.michaelprimez.searchablespinner.SearchableSpinner;
-import gr.escsoft.michaelprimez.searchablespinner.interfaces.IStatusListener;
-import gr.escsoft.michaelprimez.searchablespinner.interfaces.OnItemSelectedListener;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private Spinner cmbDatos;
     private List<ItemCustom> lista;
     private boolean cargaPrimeraVes = false;
-    private SearchableSpinner cmbDatos2;
 
     private TextInputEditText txtTitulo, txtSubTitulo;
     private Button btnAgregar, btnAceptar;
@@ -86,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
         cmbDatos = findViewById(R.id.cmbDatos);
 
-        cmbDatos2 = findViewById(R.id.cmbDatos2);
 
         txtTitulo =  findViewById(R.id.txtTitulo);
         txtSubTitulo =  findViewById(R.id.txtSubtitulo);
@@ -105,19 +101,6 @@ public class MainActivity extends AppCompatActivity {
         miAdaptador =  new CustomArrayAdapterSpinner(getApplicationContext(),R.layout.layout_item_spinner,lista);
         cmbDatos.setAdapter(miAdaptador);
 
-        cmbDatos2.setStatusListener(new IStatusListener() {
-            @Override
-            public void spinnerIsOpening() {
-                MainActivity.this.cmbDatos2.hideEdit();
-            }
-
-            @Override
-            public void spinnerIsClosing() {
-
-            }
-        });
-
-        cmbDatos2.setAdapter(miAdaptador);
 
         cargaPrimeraVes =  true;
 
@@ -180,19 +163,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        cmbDatos2.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(View view, int position, long id) {
-                String titulo = lista.get(position).getTitulo();
-                Toast.makeText(getApplicationContext(),titulo, Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNothingSelected() {
-
-            }
-        });
 
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
