@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
     public void Inicializar()
     {
 
-        btnIr = (Button) findViewById(R.id.btnIr);
+        btnIr = findViewById(R.id.btnIr);
 
-        btnlistaConImagen = (Button) findViewById(R.id.btnlistaConImagen);
+        btnlistaConImagen = findViewById(R.id.btnlistaConImagen);
 
     }
 

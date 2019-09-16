@@ -34,7 +34,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
     public void Inicializar(){
-        Lista = (ListView) findViewById(R.id.Lista);
+        Lista = findViewById(R.id.Lista);
 
         listaPersonas =  new ArrayList<Persona>();
         listaPersonas.add(new Persona("Bill gates","Microsoft", R.drawable.c_bill_gates,R.drawable.g_bill_gates));
@@ -74,18 +74,19 @@ public class Main3Activity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = appCompatActivity.getLayoutInflater();
+
             View item = inflater.inflate(R.layout.layout_persona,null);
 
-            TextView textNombre = (TextView) item.findViewById(R.id.txtNombrePersona);
+            TextView textNombre =  item.findViewById(R.id.txtNombrePersona);
             textNombre.setText(listaPersonas.get(position).getNombre());
 
-            CircleImageView imagen2 = (CircleImageView) item.findViewById(R.id.ImgPersona2);
+            CircleImageView imagen2 =  item.findViewById(R.id.ImgPersona2);
             imagen2.setImageResource(listaPersonas.get(position).getImagen());
 
            // ImageView imagen = (ImageView) item.findViewById(R.id.ImgPersona);
            // imagen.setImageResource(listaPersonas.get(position).getImagen());
 
-            TextView textEmpresa = (TextView) item.findViewById(R.id.txtEmpresaPersona);
+            TextView textEmpresa =  item.findViewById(R.id.txtEmpresaPersona);
             textEmpresa.setText(listaPersonas.get(position).getEmpresa());
 
 
