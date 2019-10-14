@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         //datasource.guardarEvento("Clausura del festival","Martes 17 Nov.");
 
         final ListView listaeventos  = findViewById(R.id.listaeventos);
-        List<EntidadEvento> registros = new ArrayList<EntidadEvento>();
+        List<EntidadEvento> registros = new ArrayList<>();
 
         // SE ESTA LLAMANDO AL METODO PARA TRAERNOS  TODA LA INFORMACION DE LA BD
         Cursor cursor  =  datasource.consultarEventos();

@@ -1,10 +1,7 @@
 package com.example.felipehernandez.ejemplosqlite;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,8 +25,8 @@ public class DetalleEventos extends AppCompatActivity {
 
          datasource  =  new EventosDatasource(this);
 
-        _txtdia  = (TextView) findViewById(R.id.txtdia);
-        _txtdescripcion  =  (TextView) findViewById(R.id.txtDescripcion);
+        _txtdia  =  findViewById(R.id.txtdia);
+        _txtdescripcion  =   findViewById(R.id.txtDescripcion);
 
 
         //PARAMETROS DE OTRA ACTIVIDAD
@@ -42,8 +39,8 @@ public class DetalleEventos extends AppCompatActivity {
             dia  =  b.getString("dia");
             descripcion  =  b.getString("descripcion");
 
-            _txtdia.setText(dia.toString());
-            _txtdescripcion.setText(descripcion.toString());
+            _txtdia.setText(dia);
+            _txtdescripcion.setText(descripcion);
 
         }
 
