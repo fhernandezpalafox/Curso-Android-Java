@@ -1,6 +1,7 @@
 package felipesistemas.com.app8;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -8,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.Icon;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
@@ -20,10 +22,17 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnnotificacion1,btnnotificacion2,btnnotificacion3,btnnotificacion4, btnnotificacion5;
+    private Button btnnotificacion1,btnnotificacion2,btnnotificacion3,btnnotificacion4;
     private int NumeroNotificaciones = 5;
 
-    private ConfiguracionNotificacionV8 configuracionNotificacionV8;
+    private NotificationManager mManager;
+
+    public NotificationManager getManager() {
+        if (mManager == null) {
+            mManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        }
+        return mManager;
+    }
 
 
     public void shortCustDinamico(){
@@ -60,6 +69,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    private void createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+
+            NotificationChannel canal1Prueba = new NotificationChannel("com.prueba.canalPrueba1",
+                    "Canal de prueba 1", NotificationManager.IMPORTANCE_HIGH);
+            canal1Prueba.enableLights(true);
+            canal1Prueba.enableVibration(true);
+            canal1Prueba.setLightColor(Color.GREEN);
+            canal1Prueba.setLockscreenVisibility(Notification.BADGE_ICON_SMALL);
+            getManager().createNotificationChannel(canal1Prueba);
+
+
+            NotificationChannel canal2Prueba = new NotificationChannel("com.prueba.canalPrueba2",
+                    "Canal de prueba 2", NotificationManager.IMPORTANCE_HIGH);
+            canal2Prueba.enableLights(true);
+            canal2Prueba.enableVibration(true);
+            canal2Prueba.setLightColor(Color.GREEN);
+            canal2Prueba.setLockscreenVisibility(Notification.BADGE_ICON_SMALL);
+            getManager().createNotificationChannel(canal2Prueba);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,35 +109,26 @@ public class MainActivity extends AppCompatActivity {
         btnnotificacion3  =  findViewById(R.id.btnotificacion3);
         btnnotificacion4  =  findViewById(R.id.btnotificacion4);
 
-        btnnotificacion5  =  findViewById(R.id.btnnotificacion5);
 
+
+        createNotificationChannel();
 
         btnnotificacion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-              Notification.Builder Nbuilder;
 
-              if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "com.prueba.canalPrueba1")
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher))
+                    .setContentTitle("Ejemplo de notificacion")
+                    .setContentText("Ese es mi contenido de notificacion")
+                    .setTicker("Ejemplo de notificacion")
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                  Nbuilder =  new Notification.Builder(MainActivity.this,"1");
-              }else {
-                  Nbuilder  =  new Notification.Builder(MainActivity.this);
-              }
+                    getManager().notify(0,builder.build());
 
-              Nbuilder.setSmallIcon(R.mipmap.ic_launcher);
 
-              Nbuilder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher));
-
-              Nbuilder.setContentTitle("Ejemplo de notificacion");
-
-              Nbuilder.setContentText("Ese es mi contenido de notificacion");
-
-              Nbuilder.setTicker("Ejemplo de notificacion");
-
-              NotificationManager notificationManager  = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-              notificationManager.notify(0,Nbuilder.build());
             }
         });
 
@@ -139,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
                 NotificationCompat.Builder Nbuilder;
 
-                Nbuilder =  new NotificationCompat.Builder(MainActivity.this,"1");
+                Nbuilder =  new NotificationCompat.Builder(MainActivity.this,"com.prueba.canalPrueba2");
 
                 Nbuilder.setSmallIcon(R.mipmap.ic_launcher);
 
@@ -157,10 +183,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Nbuilder.addAction(R.drawable.ic_chat_black_24dp,"Ver Mensaje",pendingIntent);
 
-                NotificationManager notificationManager  =
-                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-                notificationManager.notify(idNoticacion,Nbuilder.build());
+                getManager().notify(0,Nbuilder.build());
+
 
 
             }
@@ -181,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
 
                 NotificationCompat.Builder Nbuilder;
 
-                Nbuilder =  new NotificationCompat.Builder(MainActivity.this,"1");
+                Nbuilder =  new NotificationCompat.Builder(MainActivity.this,"com.prueba.canalPrueba1");
 
                 Nbuilder.setSmallIcon(R.mipmap.ic_launcher);
 
@@ -197,10 +222,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Nbuilder.setStyle(textoLargo);
 
-                NotificationManager notificationManager  =
-                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-                notificationManager.notify(0,Nbuilder.build());
+                getManager().notify(0,Nbuilder.build());
 
 
             }
@@ -231,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
 
                 NotificationCompat.Builder Nbuilder;
 
-                Nbuilder =  new NotificationCompat.Builder(MainActivity.this,"1");
+                Nbuilder =  new NotificationCompat.Builder(MainActivity.this,"com.prueba.canalPrueba2");
 
                 Nbuilder.setSmallIcon(R.mipmap.ic_launcher);
 
@@ -251,45 +273,11 @@ public class MainActivity extends AppCompatActivity {
 
                 Nbuilder.addAction(R.drawable.ic_send_black_24dp,"Enviar",pendingIntent);
 
-                NotificationManager notificationManager  = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-                notificationManager.notify(idNoticacion,Nbuilder.build());
+                getManager().notify(0,Nbuilder.build());
 
             }
         });
 
-
-        btnnotificacion5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent resultIntent = new Intent(MainActivity.this,ResultadoActivity.class);
-
-                resultIntent.putExtra("parametro","valor 1");
-                resultIntent.putExtra("idNotificacion",3);
-
-                resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-
-                PendingIntent pendingIntent =  PendingIntent.getActivity(MainActivity.this,
-                        1,resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
-
-
-                configuracionNotificacionV8 =  new ConfiguracionNotificacionV8(MainActivity.this);
-
-                Notification.Builder nb =
-                        configuracionNotificacionV8.getAndroidChannelNotification("Titulo de prueba Android", "By " + "Felipe");
-
-                nb.addAction(R.drawable.ic_send_black_24dp,"Enviar",pendingIntent);
-
-                configuracionNotificacionV8.getManager().notify(101, nb.build());
-
-
-                Notification.Builder nb2 = configuracionNotificacionV8
-                        .getIosChannelNotification("Titulo de prueba iOS", "By " + "Felipe");
-
-                configuracionNotificacionV8.getManager().notify(102, nb2.build());
-            }
-        });
 
 
     }
